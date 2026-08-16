@@ -1,0 +1,247 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* CollaroidStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* CollaroidStudioApp.swift */; };
+		A10000000000000000000002 /* StudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* StudioView.swift */; };
+		A10000000000000000000003 /* StudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* StudioModel.swift */; };
+		A10000000000000000000004 /* PhotoAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* PhotoAsset.swift */; };
+		A10000000000000000000005 /* PrintTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* PrintTemplate.swift */; };
+		A10000000000000000000006 /* PrintRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* PrintRenderer.swift */; };
+		A10000000000000000000007 /* PrintService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000007 /* PrintService.swift */; };
+		A10000000000000000000008 /* FolderWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* FolderWatcher.swift */; };
+		A10000000000000000000009 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* SettingsView.swift */; };
+		A1000000000000000000000A /* StudioError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000A /* StudioError.swift */; };
+		A1000000000000000000000B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000B /* Assets.xcassets */; };
+		A1000000000000000000000C /* collaroid-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000F /* collaroid-logo.png */; };
+		A1000000000000000000000D /* CollaroidStudioDockIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* CollaroidStudioDockIcon.png */; };
+		A1000000000000000000000E /* FolderPhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* FolderPhotoItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* CollaroidStudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaroidStudioApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* StudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioView.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* StudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioModel.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* PhotoAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAsset.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* PrintTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintTemplate.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* PrintRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintRenderer.swift; sourceTree = "<group>"; };
+		A20000000000000000000007 /* PrintService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintService.swift; sourceTree = "<group>"; };
+		A20000000000000000000008 /* FolderWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderWatcher.swift; sourceTree = "<group>"; };
+		A20000000000000000000009 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A2000000000000000000000A /* StudioError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioError.swift; sourceTree = "<group>"; };
+		A2000000000000000000000B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2000000000000000000000C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2000000000000000000000D /* Collaroid Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Collaroid Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000000000000000000000E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A2000000000000000000000F /* collaroid-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Official Collaroid Logo"; path = Assets.xcassets/CollaroidLogo.imageset/collaroid-logo.png; sourceTree = "<group>"; };
+		A20000000000000000000010 /* CollaroidStudioDockIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CollaroidStudioDockIcon.png; sourceTree = "<group>"; };
+		A20000000000000000000011 /* FolderPhotoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderPhotoItem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A40000000000000000000002 /* CollaroidStudio */,
+				A2000000000000000000000E /* README.md */,
+				A40000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A40000000000000000000002 /* CollaroidStudio */ = {
+			isa = PBXGroup;
+			path = CollaroidStudio;
+			sourceTree = "<group>";
+			children = (
+				A20000000000000000000001 /* CollaroidStudioApp.swift */,
+				A20000000000000000000002 /* StudioView.swift */,
+				A20000000000000000000003 /* StudioModel.swift */,
+				A20000000000000000000004 /* PhotoAsset.swift */,
+				A20000000000000000000005 /* PrintTemplate.swift */,
+				A20000000000000000000006 /* PrintRenderer.swift */,
+				A20000000000000000000007 /* PrintService.swift */,
+				A20000000000000000000008 /* FolderWatcher.swift */,
+				A20000000000000000000009 /* SettingsView.swift */,
+				A2000000000000000000000A /* StudioError.swift */,
+				A20000000000000000000011 /* FolderPhotoItem.swift */,
+				A2000000000000000000000B /* Assets.xcassets */,
+				A2000000000000000000000F /* collaroid-logo.png */,
+				A20000000000000000000010 /* CollaroidStudioDockIcon.png */,
+				A2000000000000000000000C /* Info.plist */,
+			);
+		};
+		A40000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (A2000000000000000000000D /* Collaroid Studio.app */);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000000000000000000001 /* CollaroidStudio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A60000000000000000000002 /* Build configuration list for PBXNativeTarget */;
+			buildPhases = (
+				A30000000000000000000002 /* Sources */,
+				A30000000000000000000001 /* Frameworks */,
+				A30000000000000000000003 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = CollaroidStudio;
+			productName = "Collaroid Studio";
+			productReference = A2000000000000000000000D /* Collaroid Studio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A70000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = { A50000000000000000000001 = { CreatedOnToolsVersion = 26.6; }; };
+			};
+			buildConfigurationList = A60000000000000000000001 /* Build configuration list for PBXProject */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = A40000000000000000000001;
+			productRefGroup = A40000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (A50000000000000000000001 /* CollaroidStudio */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A30000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000000000000000000000B /* Assets.xcassets in Resources */,
+				A1000000000000000000000C /* collaroid-logo.png in Resources */,
+				A1000000000000000000000D /* CollaroidStudioDockIcon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A30000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001,
+				A10000000000000000000002,
+				A10000000000000000000003,
+				A10000000000000000000004,
+				A10000000000000000000005,
+				A10000000000000000000006,
+				A10000000000000000000007,
+				A10000000000000000000008,
+				A10000000000000000000009,
+				A1000000000000000000000A,
+				A1000000000000000000000E /* FolderPhotoItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A80000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A80000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A80000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CollaroidStudio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.collaroid.studio;
+				PRODUCT_NAME = "Collaroid Studio";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		A80000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CollaroidStudio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.collaroid.studio;
+				PRODUCT_NAME = "Collaroid Studio";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A60000000000000000000001 /* Build configuration list for PBXProject */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (A80000000000000000000001, A80000000000000000000002);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A60000000000000000000002 /* Build configuration list for PBXNativeTarget */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (A80000000000000000000003, A80000000000000000000004);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A70000000000000000000001 /* Project object */;
+}
