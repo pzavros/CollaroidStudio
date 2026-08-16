@@ -20,7 +20,12 @@ struct RenderSmokeTest {
         var data = Data()
         for iteration in 1...iterations {
             data = try autoreleasepool {
-                let rendered = try PrintRenderer.render(photo: photo, crop: crop)
+                let rendered = try PrintRenderer.render(
+                    photo: photo,
+                    crop: crop,
+                    adjustments: PhotoAdjustments(),
+                    includeBorder: true
+                )
                 precondition(rendered.width == 1181)
                 precondition(rendered.height == 1748)
                 return try PrintRenderer.jpegData(from: rendered, quality: 0.95)

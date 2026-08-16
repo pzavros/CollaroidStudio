@@ -1,50 +1,231 @@
-# Collaroid Studio
+<div align="center">
+  <img src="CollaroidStudio/CollaroidStudioDockIcon.png" width="144" alt="Collaroid Studio app icon">
 
-Collaroid Studio is a native, offline macOS utility for preparing consistent 100 × 148 mm Dog Fest prints.
+  <h1>Collaroid Studio</h1>
 
-## Open and run
+  <p><strong>A fast, native macOS photo-to-print workflow for Collaroid Dog Fest.</strong></p>
+  <p>Open a folder, perfect each portrait, and produce consistent event-ready prints—without uploading a single photo.</p>
 
-1. Open `CollaroidStudio.xcodeproj` in Xcode.
-2. Select the **CollaroidStudio** scheme.
-3. Run on **My Mac**.
+  <p>
+    <img alt="macOS 14+" src="https://img.shields.io/badge/macOS-14%2B-111827?logo=apple&logoColor=white">
+    <img alt="Swift 5" src="https://img.shields.io/badge/Swift-5-F05138?logo=swift&logoColor=white">
+    <img alt="SwiftUI" src="https://img.shields.io/badge/UI-SwiftUI-0A84FF">
+    <img alt="Offline" src="https://img.shields.io/badge/processing-100%25%20offline-22C55E">
+    <img alt="No dependencies" src="https://img.shields.io/badge/dependencies-none-8B5CF6">
+  </p>
+</div>
 
-The app defaults to `~/Pictures/Collaroid Dog Fest Prints`, automatically resumes at the next unused dog number, and exports 1181 × 1748 px sRGB JPEGs at 300 DPI metadata.
+---
 
-## Photo-folder workflow
+## The studio, without the production drag
 
-Choose an **Opened folder** in Settings to turn it into the event photo library. Collaroid Studio scans its JPG, JPEG, and PNG files, displays them chronologically in the thumbnail browser, and can refresh the browser when new files arrive. The browser appears vertically on the left by default; **Settings → Photo Folder → Photo browser position** can switch it between **Left** and **Bottom**, and the choice is remembered. Clicking a thumbnail or using ⌘← / ⌘→ changes the active photo. **Export & Next** marks the source thumbnail as exported and advances to the next unexported photo; originals are never modified or deleted.
+Collaroid Studio is a purpose-built desktop application for preparing **100 × 148 mm** Dog Fest photo prints. It combines a watched photo folder, a focused editor, precise print rendering, and an **Export & Next** workflow in one native Mac experience.
 
-## Native macOS interface
+It is designed for busy event environments: predictable output, quick keyboard navigation, no browser tabs, no cloud dependency, and no accidental edits to original photographs.
 
-The studio uses the standard macOS window toolbar, split-view photo browser, inspector, forms, buttons, control groups, system materials, and SF Symbols. The leading toolbar button shows or hides the photo browser. Native Add Photo, Print, Export, Settings, and inspector controls sit on the trailing edge, with the inspector toggle at the far right. Panel visibility choices are remembered. On macOS 26 or newer, navigation controls, the dog-number status badge, and the primary export action use Liquid Glass; earlier supported macOS versions receive native system-material and bordered-control fallbacks. The app follows the Mac's Light or Dark appearance automatically.
+## Highlights
 
-The inspector includes a native **Border & Branding** switch. Turn it off to preview, export, or print the photo full-bleed without the white border, logo, or event text. The preference is remembered.
+| | Feature | What it does |
+|---:|---|---|
+| 📂 | **Live photo folder** | Watches a chosen folder for JPG, JPEG, and PNG files and refreshes the browser as new photos arrive. |
+| 🖼️ | **Flexible browser** | Shows thumbnails vertically on the left or horizontally below the canvas, with exported-photo checkmarks. |
+| ✨ | **Native Mac interface** | Uses SwiftUI, AppKit, SF Symbols, system materials, inspectors, toolbars, keyboard commands, and Liquid Glass where available. |
+| 🔍 | **Direct crop control** | Zoom with a mouse wheel or trackpad pinch, then drag the photograph into position. |
+| 🎨 | **Photographic adjustments** | Refine Shadows, Highlights, Saturation, and Warmth with live preview and one-click reset. |
+| 🪄 | **Optional event layout** | Switch between the branded Dog Fest print and a clean full-bleed photograph. |
+| 🖨️ | **Print-ready rendering** | Produces a locked 1181 × 1748 px sRGB image with 300 DPI metadata. |
+| ✅ | **Export & Next** | Saves a numbered JPEG, marks the source as exported, and advances to the next unfinished photo. |
+| 🔒 | **Private by design** | Processes everything locally and never changes or deletes source photographs. |
 
-The print preview supports direct editing: pinch on a trackpad or scroll the mouse wheel over the photo to zoom, then drag the photo to reposition it. The inspector zoom and reset controls remain available.
+## Workflow
 
-The native **Adjustments** section provides per-photo sliders for Shadows, Highlights, Saturation, and Warmth, with a one-click reset. Adjustments are retained while moving between photos during the session and are applied identically to the preview, exported JPEG, and printed output.
+```mermaid
+flowchart LR
+    A["Choose photo folder"] --> B["Select or drop a photo"]
+    B --> C["Crop and reposition"]
+    C --> D["Adjust tones and colour"]
+    D --> E{"Choose layout"}
+    E -->|"Branded"| F["Dog Fest print"]
+    E -->|"Full bleed"| G["Photo only"]
+    F --> H["Print or Export & Next"]
+    G --> H
+    H --> I["Mark exported and advance"]
+```
+
+1. Choose an **Opened folder** in Settings.
+2. Select a thumbnail, drag in a photograph, or press `⌘O`.
+3. Crop with scroll, pinch, and drag gestures.
+4. Refine the photograph in the inspector.
+5. Keep **Border & Branding** on for the event template, or turn it off for full bleed.
+6. Print immediately or choose **Export & Next** to continue through the queue.
+
+## Output contract
+
+Every export follows a fixed production specification:
+
+| Property | Value |
+|---|---|
+| Physical format | 100 × 148 mm |
+| Pixel dimensions | 1181 × 1748 px |
+| Resolution metadata | 300 DPI |
+| Colour space | sRGB |
+| File format | JPEG |
+| JPEG quality | Configurable from 85–100% |
+| Naming | `collaroid-dogfest-001.jpg`, `002`, `003`, … |
+| Default destination | `~/Pictures/Collaroid Dog Fest Prints` |
+
+The next dog number is derived from existing exports, so reopening the application continues the sequence safely.
+
+## Requirements
+
+- macOS 14 Sonoma or later
+- Xcode 26 or later
+- A Mac capable of running the selected macOS version
+
+There are **no third-party packages, analytics SDKs, accounts, or network services**.
+
+## Build and run
+
+Clone or download the repository, then open the Xcode project:
+
+```bash
+cd CollaroidStudio
+open CollaroidStudio.xcodeproj
+```
+
+In Xcode:
+
+1. Select the **CollaroidStudio** scheme.
+2. Choose **My Mac** as the destination.
+3. Press `⌘R`.
+
+Or verify a Release build from Terminal:
+
+```bash
+xcodebuild \
+  -project CollaroidStudio.xcodeproj \
+  -scheme CollaroidStudio \
+  -configuration Release \
+  CODE_SIGNING_ALLOWED=NO \
+  build
+```
+
+## Controls
+
+### Crop and positioning
+
+- **Trackpad pinch** or **mouse wheel** — zoom the preview
+- **Click and drag** — reposition the photograph
+- **Zoom buttons** — make precise stepped adjustments
+- **Reset Crop** — return to the default framing
+
+### Photo adjustments
+
+- **Shadows** — lift or deepen dark detail while protecting the black point
+- **Highlights** — recover or strengthen bright detail while protecting pure white
+- **Saturation** — move from muted colour to a richer image
+- **Warmth** — cool down or warm up the photograph
+
+Adjustments are stored per photo for the current session. The preview, exported JPEG, and printed result share the same Core Image processing pipeline.
+
+### Keyboard shortcuts
+
+| Shortcut | Action |
+|---|---|
+| `⌘O` | Open a photo |
+| `⌘P` | Print the current composition |
+| `⌘←` / `⌘→` | Previous / next folder photo |
+| `+` / `−` | Zoom in / out |
+| `R` | Reset crop |
+| `Return` | Export & Next |
+
+## Settings
+
+| Section | Options |
+|---|---|
+| **Export** | Destination folder and JPEG quality |
+| **Photo Folder** | Opened folder, automatic refresh, and browser position |
+| **Inspector** | Border & Branding layout toggle |
+
+Preferences such as folder locations, JPEG quality, browser position, panel visibility, and layout choice are remembered between launches.
+
+## Architecture
+
+Collaroid Studio keeps the implementation intentionally small and framework-native.
+
+```text
+CollaroidStudio/
+├── CollaroidStudio.xcodeproj/       Xcode project
+├── CollaroidStudio/
+│   ├── CollaroidStudioApp.swift     App lifecycle and commands
+│   ├── StudioView.swift             Workspace, browser, preview, inspector
+│   ├── StudioModel.swift            Workflow and application state
+│   ├── PhotoAsset.swift             Image loading and preview data
+│   ├── FolderWatcher.swift          Live folder monitoring
+│   ├── FolderPhotoItem.swift        Folder scanning and export state
+│   ├── PrintTemplate.swift          Locked output geometry
+│   ├── PrintRenderer.swift          Crop, adjustments, branding, JPEG output
+│   ├── PrintService.swift           Native print integration
+│   ├── SettingsView.swift           Persistent app settings
+│   └── Assets.xcassets/             Production app and brand assets
+└── Tools/
+    └── RenderSmokeTest.swift        Standalone renderer verification
+```
+
+### Apple frameworks
+
+- **SwiftUI** and **AppKit** for the desktop experience
+- **Core Image** for nondestructive photographic adjustments
+- **Core Graphics**, **Core Text**, and **Image I/O** for deterministic print rendering
+- **Uniform Type Identifiers** for image import and export
 
 ## Renderer smoke test
 
-`Tools/RenderSmokeTest.swift` can be compiled with the renderer sources to verify a real source image produces a 1181 × 1748 JPEG with 300 DPI metadata. Its optional iteration argument supports repeated-use stress testing.
+Compile the standalone renderer check:
 
-## Official logo
+```bash
+xcrun swiftc \
+  Tools/RenderSmokeTest.swift \
+  CollaroidStudio/PhotoAsset.swift \
+  CollaroidStudio/PrintTemplate.swift \
+  CollaroidStudio/PrintRenderer.swift \
+  CollaroidStudio/StudioError.swift \
+  -o /tmp/collaroid-render-smoke
+```
 
-The supplied official Collaroid wordmark is stored with its grey background removed at:
+Run it with a local image:
 
-`CollaroidStudio/Assets.xcassets/CollaroidLogo.imageset/collaroid-logo.png`
+```bash
+/tmp/collaroid-render-smoke input.jpg /tmp/collaroid-output.jpg
+```
 
-The lettering, proportions, colours, and orange dot are preserved; only the neutral background pixels were converted to transparency. The logo remains locked in the print template.
+The tool verifies the final dimensions and 300 DPI metadata. An optional third argument repeats the render for stress testing.
 
-## Collaroid Studio identity
+## Privacy and safety
 
-The selected Option 3 identity is integrated into the macOS app icon. Only the production assets required by the app are kept in the source tree; concept artwork and duplicate design exports are intentionally excluded.
+- All image processing happens on the Mac.
+- Original files are treated as read-only inputs.
+- Exported-state checkmarks are local workflow metadata.
+- No telemetry, login, upload, or cloud service is used.
+- Print dimensions and resolution are locked to prevent accidental production drift.
 
-## Event shortcuts
+## Contributing
 
-- ⌘O — add photo
-- Return — export and reset
-- ⌘P — print current composition
-- ⌘← / ⌘→ — previous or next folder photo
-- + / − — zoom
-- R — reset crop
+Issues and pull requests are welcome. Changes should preserve four core principles:
+
+1. **Stay native** — prefer Apple frameworks and standard macOS interaction patterns.
+2. **Stay offline** — event photographs should not leave the operator's Mac.
+3. **Protect originals** — never modify or delete source photos.
+4. **Keep parity** — the preview, export, and print pipelines must agree.
+
+When changing rendering code, verify both branded and full-bleed layouts and run a Release build before opening a pull request.
+
+## Brand notice
+
+Collaroid, the Collaroid wordmark, and the Collaroid Studio identity are © 2026 Collaroid. Brand assets included in this repository are provided for this application and remain the property of Collaroid.
+
+---
+
+<div align="center">
+  <strong>Made for faster portraits, calmer event queues, and more dogs going home with a great print.</strong>
+</div>
